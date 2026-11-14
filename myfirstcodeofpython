@@ -1,0 +1,24 @@
+import random
+import time
+while True:
+    secim = input("Ne seçeceksin?")
+    bot_Secim = random.choice(["taş","kağıt","Makas"])
+    print(bot_Secim)
+    if secim == "taş" and bot_Secim == "taş":
+        print("Berabere!")
+    elif secim == "taş" and bot_Secim == "kağıt":
+        print("Kaybettin!")
+    elif secim == "taş" and bot_Secim == "Makas":
+        print("Kazandın!")
+    elif secim == "Makas" and bot_Secim == "Makas":
+        print("Berabere!")
+    elif secim == "Makas" and bot_Secim == "taş":
+        print("Kaybettin!")
+    elif secim == "Makas" and bot_Secim == "kağıt":
+        print("Kazandın!")
+    elif secim == "kağıt" and bot_Secim == "kağıt":
+        print("Berabere!")
+    elif secim == "kağıt" and bot_Secim == "Makas":
+        print("Kaybettin!")
+    elif secim == "kağıt" and bot_Secim == "taş":
+        print("Kazandın!")
