@@ -1,0 +1,58 @@
+import time
+import random
+
+print("=" * 65)
+print("🎰 ♣️ ♦️ ♥️ ♠️ WELCOME TO THE CLUB ♠️ ♥️ ♦️ ♣️ 🎰")
+print("=" * 65)
+
+print("""
+_ _ __ _ _ __ _ _ ___ _ _
+
+| | | |/ \ / | / | | | | \_ _| \ | |
+| || | | | (_ | | | | | | | | | || | | \| |
+| | | | |\_ \ | | |_ | __| | | | | | || | | . ` |
+| | | | || |) | | || | |__| || || || |_| |\ |
+|_| |_|\__/|_/ \_|__|__|_/___|_| \_|
+
+""")
+
+print("=" * 65)
+print("🎰 🌟 WELCOME TO GAMBLING / KUMARHANEYE HOŞ GELDİNİZ 🌟 🎰")
+print("=" * 65)
+
+giris = input("Hoş geldin şanslı misafir, adın nedir? ")
+
+print("Demek adın " + giris + " ha? İyi isim gibi.")
+time.sleep(1)
+
+sayi1 = 0
+sayi2 = 0
+sayi3 = 0
+
+while sayi1 != 7 or sayi2 != 7 or sayi3 != 7:
+
+    print("O zaman başlayalım, ne dersin?")
+
+    sayi1 = random.randint(0, 9)
+    sayi2 = random.randint(0, 9)
+    sayi3 = random.randint(0, 9)
+
+    print("Kolu çevir bakalım")
+    time.sleep(2)
+
+    print(sayi1)
+    time.sleep(2)
+
+    print(sayi2)
+    time.sleep(2)
+
+    print(sayi3)
+    time.sleep(1)
+
+    if sayi1 == 7 and sayi2 == 7 and sayi3 == 7:
+        print("🎉 TEBRİKLER! 🎉")
+    else:
+        print("Kaybettin, bir daha oyna!")
+
+print("UYARI: KUMAR ÖNERİLMEZ, OYNAMAYIN!!!!!!!!!!!!!!!!!!")
+
