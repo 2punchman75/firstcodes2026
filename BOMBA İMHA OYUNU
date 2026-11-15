@@ -1,0 +1,18 @@
+import random
+import time
+bomba = random.randint(1,50)
+yanlis_tahminler_listesi = []
+while True:
+    tahmin = int(input("Sayı seç yoksa bomba patlayacak"))
+    if tahmin == bomba:
+        print("Bomba imha edildi!")
+        print(yanlis_tahminler_listesi)
+        break
+    elif tahmin<bomba:
+        time.sleep(1.5)
+        print("Yüksel!")
+        yanlis_tahminler_listesi.append(tahmin)
+    elif tahmin>bomba:
+        time.sleep(1.5)
+        print("alçal!")
+        yanlis_tahminler_listesi.append(tahmin)
