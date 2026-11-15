@@ -1,0 +1,18 @@
+hak_Sayisi = 5
+import random
+sayi = random.randint(1,50)
+while True:
+    tahmin = int(input("Tahminin nedir?"))
+    hak_Sayisi -= 1
+    if tahmin == sayi:
+        print("Doğru tahmin!")
+        break
+    elif tahmin != sayi and tahmin> sayi:
+        print("Daha alçak sayı seç!")
+    elif tahmin != sayi and tahmin<sayi:
+        print("Daha yüksek bir sayı seç!")
+    if hak_Sayisi == 0:
+        print("Hakların bitti")
+        break
+    
+        
