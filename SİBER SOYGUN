@@ -1,0 +1,30 @@
+import time
+import random
+kalan_Haklar = 5
+gelen_Sayilar = []
+secilenler = []
+pas_gecilenler = []
+while True:
+    sayi = random.randint(1,10000)
+    secim = input("Bu veri paketini alacak mısın? Almak için q,Pas için p,operasyonu bitirmek için bitir yazabilirsin!"+"veri paketi değeri:" + str(sayi))
+    if secim == "q":
+        secilenler.append(sayi)
+        gelen_Sayilar.append(sayi)
+        print(sayi,"pas geçildi!")
+    elif secim == "p":
+        pas_gecilenler.append(sayi)
+        gelen_Sayilar.append(sayi)
+        print(sayi,"pas geçildi!")
+    elif secim != "q" and secim != "p" and secim != "Bitir" and secim != "bitir":
+        kalan_Haklar -= 1
+        print("Yanlış kod!Yerimizi tespit etmelerine " ,kalan_Haklar, " protokol kaldı!")
+    elif secim == "Bitir" or "bitir":
+        print( "Sana gelen sayılar" + str(gelen_Sayilar))
+        print("seçtiğin sayılar" + str(secilenler))
+        print("Pas geçtiğin sayılar" + str(pas_gecilenler))
+        break
+    elif kalan_Haklar == 0:
+        print("Konumumuz tespit edildi")
+        break
+    
+   
